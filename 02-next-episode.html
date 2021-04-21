@@ -12,7 +12,7 @@
 
 
 
-<title>Lesson Title: FIXME</title>
+<title>Lesson Title: Buoyant Barnacle</title>
 
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/cp/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/cp/apple-touch-icon-114x114.png" />
@@ -74,7 +74,7 @@
 
 
 
-<meta property="og:title" content="FIXME" />
+<meta property="og:title" content="Buoyant Barnacle" />
 
 
 
@@ -204,10 +204,119 @@
 <div class="row">
   <div class="contents col-md-9">
     <div class="page-header">
-      <h1>FIXME</h1>
+      <h1>Buoyant Barnacle</h1>
     </div>
 
-<p>This is a placeholder file. Please add content here.</p>
+<div class="section level2 objectives">
+<h2>Overview</h2>
+<div class="row">
+<div class="col-md-3">
+<p><strong>Teaching: </strong> 10<br />
+<strong>Exercises: </strong> 2</p>
+</div>
+<div class="col-md-9">
+<p><strong>Questions</strong></p>
+<ul>
+<li>How do you write a lesson using RMarkdown and <code>{sandpaper}</code>?</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+
+</div>
+<div class="col-md-9">
+<p><strong>Objectives</strong></p>
+<ul>
+<li>Explain how to use markdown with the new lesson template</li>
+<li>Demonstrate how to include pieces of code, figures, and nested challenge blocks</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>This is the new Carpentries template. It is written in <a href="https://rmarkdown.rstudio.com/">RMarkdown</a>, which is a variant of Markdown that allows you to render code inside the lesson. Please refer to the <a href="https://carpentries.github.io/lesson-example">lesson example</a> for full documentation.</p>
+<p>What you need to know is that there are three block quotes required for a valid Carpentries lesson template:</p>
+<ol style="list-style-type: decimal">
+<li><code>questions</code> are displayed at the beginning of the episode to prime the learner for the content.</li>
+<li><code>objectives</code> are the learning objectives for an episode displayed with the questions.</li>
+<li><code>keypoints</code> are displayed at the end of the episode to reinforce the objectives.</li>
+</ol>
+</div>
+<div class="challenge">
+<div id="challenge-1-can-you-do-it" class="section level2">
+<h2>Challenge 1: Can you do it?</h2>
+<p>What is the output of this command?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">&quot;This&quot;</span>, <span class="st">&quot;new&quot;</span>, <span class="st">&quot;template&quot;</span>, <span class="st">&quot;looks&quot;</span>, <span class="st">&quot;good&quot;</span>)</span></code></pre></div>
+</div>
+<div id="output" class="section level2 solution">
+<h2>Output</h2>
+<pre class="output"><code>[1] &quot;This new template looks good&quot;</code></pre>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="section level2">
+<h2>Challenge 2: how do you nest solutions within challenge blocks?</h2>
+</div>
+<div class="section level2 solution">
+<h2>Solution</h2>
+<p>You can add a line with at least three colons and a <code>solution</code> tag.</p>
+</div>
+</div>
+<div class="challenge">
+<div id="challenge-3-testing-if-i-can-make-challenges" class="section level2">
+<h2>Challenge 3 : testing if I can make challenges?</h2>
+<p>What libraries do you have loaded? Try using <code>sessionInfo()</code> to find out</p>
+</div>
+<div class="section level2 solution">
+<h2>Solution</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre class="output"><code>R version 4.0.5 (2021-03-31)
+Platform: x86_64-apple-darwin17.0 (64-bit)
+Running under: macOS Catalina 10.15.7
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] compiler_4.0.5       magrittr_2.0.1       assertthat_0.2.1    
+ [4] tools_4.0.5          fs_1.5.0             stringi_1.5.3       
+ [7] knitr_1.32           stringr_1.4.0        xfun_0.22           
+[10] evaluate_0.14        sandpaper_0.0.0.9022</code></pre>
+</div>
+</div>
+<div id="figures" class="section level2">
+<h2>Figures</h2>
+<p>You can also include figures:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pie</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">Sky =</span> <span class="dv">78</span>, <span class="st">&quot;Sunny side of pyramid&quot;</span> <span class="ot">=</span> <span class="dv">17</span>, <span class="st">&quot;Shady side of pyramid&quot;</span> <span class="ot">=</span> <span class="dv">5</span>), </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">init.angle =</span> <span class="dv">315</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;deepskyblue&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;yellow3&quot;</span>), </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">border =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="fig/02-next-episode-rendered-pyramid-1.png" title="plot of chunk pyramid" alt="plot of chunk pyramid" style="display: block; margin: auto;" /></p>
+</div>
+<div id="math" class="section level2">
+<h2>Math</h2>
+<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to create dynamic reports with {knitr}, so we now use mathjax to describe this:</p>
+<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
+<p>Cool, right?</p>
+</div>
+<div class="section level2 keypoints">
+<h2>Keypoints</h2>
+<ul>
+<li>Use <code>.Rmd</code> files for lessons even if you don’t need to generate any code</li>
+<li>Run <code>sandpaper::check_lesson()</code> to identify any issues with your lesson</li>
+<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson locally</li>
+</ul>
+</div>
+<!-- Please do not delete anything below this line -->
 
   </div>
 
@@ -229,7 +338,7 @@
   <div class="row">
     <div class="col-xs-1">
       <h3 class="text-left">
-        <a href="index.html"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+        <a href="01-introduction.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
       </h3>
     </div>
     <div class="col-xs-10">
@@ -250,7 +359,7 @@
       by <a href="https://softwarecarpentry.org">Software Carpentry Foundation</a>
     </div>
     <div class="col-md-6 help-links pull-right" align="right">
-      <a href="https://github.com/carpentries/sandpaper/edit/main/instructors/instructor-notes.md" data-checker-ignore>Edit on GitHub</a>
+      <a href="https://github.com/carpentries/sandpaper/edit/main/episodes/02-next-episode.Rmd" data-checker-ignore>Edit on GitHub</a>
       /
       <a href="https://github.com/carpentries/sandpaper/blob/main/CONTRIBUTING.md" data-checker-ignore>Contributing</a>
       /
